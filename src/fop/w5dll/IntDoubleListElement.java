@@ -11,5 +11,7 @@ public class IntDoubleListElement {
         this.prev = null;
     }
 
-
+    public void setInfo(int info) {
+        this.info = info;
+    }
 }
