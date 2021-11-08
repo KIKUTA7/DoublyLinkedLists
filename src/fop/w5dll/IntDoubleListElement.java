@@ -2,8 +2,8 @@ package fop.w5dll;
 
 public class IntDoubleListElement {
     private int info;
-    public IntDoubleList next;
-    public IntDoubleList prev;
+    public IntDoubleListElement next;
+    public IntDoubleListElement prev;
     public IntDoubleListElement (int x)
     {
         this.info = x;
