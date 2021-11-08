@@ -81,6 +81,19 @@ public class IntDoubleList {
         }
         return newE;
     }
+    public String toString()
+    {
+        StringBuilder s= new StringBuilder();
+        if(this.tail==this.head) {return ""+tail.getInfo();}
+        else {
+            s.append(head.getInfo());
+            for (IntDoubleListElement t=head.next;t!=null;t=t.next)
+            {
+                s.append(",").append(t.getInfo());
+            }
+            return s.toString();
+        }
+    }
 
 
 }
