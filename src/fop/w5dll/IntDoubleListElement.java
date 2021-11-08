@@ -1,10 +1,10 @@
 package fop.w5dll;
 
 public class IntDoubleListElement {
-    private int info;
+    private IntDoubleList info;
     public IntDoubleListElement next;
     public IntDoubleListElement prev;
-    public IntDoubleListElement (int x)
+    public IntDoubleListElement (IntDoubleList x)
     {
         this.info = x;
         this.next = null;
