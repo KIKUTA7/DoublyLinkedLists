@@ -14,4 +14,24 @@ public class IntDoubleListElement {
     public void setInfo(int info) {
         this.info = info;
     }
+
+    public void setNext(IntDoubleListElement next) {
+        this.next = next;
+    }
+
+    public void setPrev(IntDoubleListElement prev) {
+        this.prev = prev;
+    }
+
+    public int getInfo() {
+        return info;
+    }
+
+    public IntDoubleListElement getNext() {
+        return next;
+    }
+
+    public IntDoubleListElement getPrev() {
+        return prev;
+    }
 }
