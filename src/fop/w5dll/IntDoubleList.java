@@ -47,7 +47,7 @@ public class IntDoubleList {
             s++;
             if(s==pos - 1) return t.getInfo();
         }
-        return 0;
+        return 1;
     }
     public void remove(int pos)
     {
