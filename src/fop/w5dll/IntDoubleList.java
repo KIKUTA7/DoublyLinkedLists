@@ -45,7 +45,7 @@ public class IntDoubleList {
         for (IntDoubleListElement t=head;t!=null;t=t.next)
         {
             s++;
-            if(s==pos - 1) return t.getInfo();
+            if(s==pos) return t.getInfo();
         }
         return 0;
     }
