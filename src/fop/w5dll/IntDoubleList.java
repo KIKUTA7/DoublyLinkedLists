@@ -59,7 +59,7 @@ public class IntDoubleList {
         for (IntDoubleListElement t=head.next;t.next!=null;t=t.next)
         {
             s++;
-            if(s==pos ) {t.next=t.next.next;t.next.prev = t;}
+            if(s==pos - 1) { t.next=t.next.next;t.next.prev = t;}
         }
 
     }
