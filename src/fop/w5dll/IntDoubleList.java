@@ -85,6 +85,7 @@ public class IntDoubleList {
     public String toString()
     {
         StringBuilder s= new StringBuilder();
+        if(this.tail == null && this.head == null) return "";
         if(this.tail==this.head) {return ""+tail.getInfo();}
         else {
             s.append(head.getInfo());
