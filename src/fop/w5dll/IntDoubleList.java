@@ -51,7 +51,7 @@ public class IntDoubleList {
     }
     public void remove(int pos)
     {
-        int s=-1;
+        int s=0;
         if(tail == null && head ==null) return;
         if( this.tail==this.head  )  {tail = null;head=null; return ;}
         if(pos == 0) {head=head.next;head.prev=null;return;}
