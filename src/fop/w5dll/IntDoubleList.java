@@ -111,6 +111,16 @@ public class IntDoubleList {
         }
         return v;
     }
+    public boolean isEqual(IntDoubleList other)
+    {
+        IntDoubleListElement k = other.head;
+        boolean answer = true;
+        for (IntDoubleListElement t=head; t!=null ; t=t.next){
+           if(!(t.getInfo() == k.getInfo() && t.prev == k.prev && t.next == k.next))
+           { answer =false;break;}
+        k=k.next;}
+        return answer;
+    }
 
 
 }
