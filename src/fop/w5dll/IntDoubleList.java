@@ -116,7 +116,7 @@ public class IntDoubleList {
     public boolean isEqual(IntDoubleList other)
     {
         IntDoubleListElement k = other.head;
-        if(k==null && this.head==null && this.tail==null) return false;
+        if(k==null) return false;
         boolean answer = true;
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
            if(!(t.getInfo() == k.getInfo() && t.prev == k.prev && t.next == k.next))
