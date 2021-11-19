@@ -51,15 +51,16 @@ public class IntDoubleList {
     }
     public void remove(int pos)
     {
-        int s=0;
+        int s= -1;
         if(tail == null && head ==null) return;
         if( this.tail==this.head  )  {tail = null;head=null; return ;}
         if(pos == 0) {head=head.next;head.prev=null;return;}
         else if(pos == size() - 1) {tail=tail.prev;tail.next=null;return;}
-        for (IntDoubleListElement t=head.next;t.next!=null;t=t.next)
+        for (IntDoubleListElement t=head;t.next!=null;t=t.next)
         {
             s++;
-            if(s==pos) { IntDoubleListElement t1 = t.prev; t=t.next;t1.prev = t1;}
+            if(s==pos - 1) { t.next=t.next.next;t.next.prev = t;}
+          //if(s==pos)  IntDoubleListElement t1 = t.prev; t=t.next;t1.prev = t1;
         }
 
     }
