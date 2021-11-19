@@ -59,9 +59,9 @@ public class IntDoubleList {
         for (IntDoubleListElement t=head;t!=null;t=t.next)
         {
             s++;
-           // if(s==pos - 1) { t.next=t.next.next;t.next.prev = t;}
-         // chemi versia:
-            if(s==pos + 1)  {IntDoubleListElement t1 = t.prev; t=t.next;t.prev = t1;}
+         //   if(s==pos - 1) { t.next=t.next.next;t.next.prev = t;}
+         // chemi versia: (magram t.next!=null t!= null it unda sheicvalos)
+            if(s==pos + 1)  {IntDoubleListElement t1 = t.prev; t=t.next;if(t!=null) t.prev = t1;}
         }
 
     }
