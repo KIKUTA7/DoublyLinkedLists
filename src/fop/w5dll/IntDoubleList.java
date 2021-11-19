@@ -101,7 +101,7 @@ public class IntDoubleList {
     {
         int k=0;
         IntDoubleListElement [] x= new IntDoubleListElement[size()];
-        for (IntDoubleListElement t=head;t!=null;t=t.next)
+        for (IntDoubleListElement t=head;t.next!=null;t=t.next)
         {
             if(t.getInfo() == intValue && this.head ==this.tail) {x[k]= t;x[k].prev=null;x[k].next = null;k++;}
             else if(t.getInfo() == intValue ) {x[k] = t;x[k].prev = x[k-1];x[k-1].next = x[k];k++;}
