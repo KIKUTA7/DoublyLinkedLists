@@ -123,7 +123,7 @@ public class IntDoubleList {
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
            if(!(t.getInfo() == k.getInfo() && t.prev == k.prev && t.next == k.next))
            { answer =false;break;}
-        if(k.next != null) k=k.next;}
+         k=k.next;}
         return answer;
     }
 
