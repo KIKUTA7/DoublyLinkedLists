@@ -104,14 +104,16 @@ public class IntDoubleList {
         for (IntDoubleListElement t=head;t.next!=null;t=t.next)
         {
             if(t.getInfo() == intValue && this.head ==this.tail) {x[k]= t;x[k].prev=null;x[k].next = null;k++;}
-            else if(t.getInfo() == intValue ) {x[k] = t;x[k].prev = x[k-1];x[k-1].next = x[k];k++;}
+            else if(t.getInfo() == intValue ) {
+                x[k] = t;
+                if(k > 0) x[k].prev = x[k-1];
+                else x[k].prev = null;
+                if(k > 0) x[k-1].next = x[k];
+                k++;}
 
         }
         IntDoubleListElement [] v = new IntDoubleListElement[k];
-        for (int i=0;i<k;i++)
-        {
-            v[i] = x[i];
-        }
+        System.arraycopy(x, 0, v, 0, k);
         return v;
     }
     public boolean isEqual(IntDoubleList other)
