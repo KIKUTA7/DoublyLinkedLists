@@ -121,6 +121,7 @@ public class IntDoubleList {
         if(k==null) return false;
         boolean answer = true;
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
+            if(t.next==null && k.next!=null) {answer = false;break;}
            if(!(t.getInfo() == k.getInfo() && t.prev == k.prev && t.next == k.next))
            { answer =false;break;}
          k=k.next;}
