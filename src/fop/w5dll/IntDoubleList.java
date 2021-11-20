@@ -122,15 +122,13 @@ public class IntDoubleList {
         IntDoubleListElement k = other.head;
         if(k==null && this.head == null) return true;
         if(k==null) return false;
-        boolean answer = true;
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
             if(k==null) return false;
-            if(t.next==null && k.next!=null) {answer = false;break;}
+            if(t.next==null && k.next!=null) {return  false;}
            if(!t.isEqual(k))
-           { answer =false;break;}
-         if(k!=null) k=k.next;
-        else {answer = false;break;}}
-        return answer;
+           { return false;}
+          k=k.next; }
+        return true;
     }
     //    public boolean isEqual(IntDoubleList other) {
 //        IntDoubleListElement mytemp = head;
