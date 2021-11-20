@@ -124,10 +124,11 @@ public class IntDoubleList {
         if(k==null) return false;
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
             if(k==null) return false;
+            if(t.next==null && k.next!=null) {return  false;}
            if(!t.isEqual(k))
            { return false;}
           k=k.next; }
-        return true;
+        return k!=null;
     }
     //    public boolean isEqual(IntDoubleList other) {
 //        IntDoubleListElement mytemp = head;
