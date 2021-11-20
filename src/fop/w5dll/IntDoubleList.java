@@ -120,27 +120,19 @@ public class IntDoubleList {
     {
         if(other == null) return false;
         IntDoubleListElement k = other.head;
-        if(k==null && this.head == null) return true;
-        if(k==null) return false;
-        for (IntDoubleListElement t=head; t!=null ; t=t.next){
-            if(k==null) return false;
-            if(t.next==null && k.next!=null) {return  false;}
-           if(!t.isEqual(k))
-           { return false;}
-          k=k.next; }
-        return k!=null;
+        IntDoubleListElement t = this.head;
+        while (t!=null)
+        {
+            if(!k.isEqual(t))
+            {
+                return false;
+            }
+            t=t.next;
+            k=k.next;
+        }
+        return k==null;
     }
-    //    public boolean isEqual(IntDoubleList other) {
-//        IntDoubleListElement mytemp = head;
-//        IntDoubleListElement othertemp = other.head;
-//        while (mytemp != null) {
-//            if (!mytemp.isEqual(othertemp))
-//                return false;
-//            mytemp = mytemp.next;
-//            othertemp = othertemp.next;
-//        }
-//        return othertemp == null;
-//    }
+
 
 }
 
