@@ -128,16 +128,6 @@ public class IntDoubleList {
          k=k.next;}
         return answer;
     }
-//    public boolean isEqual(IntDoubleList other) {
-//        IntDoubleListElement mytemp = head;
-//        IntDoubleListElement othertemp = other.head;
-//        while (mytemp != null) {
-//            if (!mytemp.isEqual(othertemp))
-//                return false;
-//            mytemp = mytemp.next;
-//            othertemp = othertemp.next;
-//        }
-//        return othertemp == null;
-//    }
+
 }
 
