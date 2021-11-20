@@ -120,6 +120,8 @@ public class IntDoubleList {
     {
         if(other == null) return false;
         IntDoubleListElement k = other.head;
+        if(k==null && this.head == null) return true;
+        if(k==null) return false;
         boolean answer = true;
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
             if(t.next==null && k.next!=null) {answer = false;break;}
