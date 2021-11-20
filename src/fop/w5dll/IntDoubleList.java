@@ -121,6 +121,9 @@ public class IntDoubleList {
         if(other == null) return false;
         IntDoubleListElement k = other.head;
         IntDoubleListElement t = this.head;
+        if(k==null && t==null) return true;
+        if(t==null) return false;
+        if(k==null) return false;
         while (t!=null)
         {
             if(!k.isEqual(t))
@@ -130,7 +133,7 @@ public class IntDoubleList {
             t=t.next;
             k=k.next;
         }
-        return k==null;
+        return true;
     }
 
 
