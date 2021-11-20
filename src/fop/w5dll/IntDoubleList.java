@@ -123,11 +123,22 @@ public class IntDoubleList {
         boolean answer = true;
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
             if(t.next==null && k.next!=null) {answer = false;break;}
-           if(!(t.getInfo() == k.getInfo() && t.prev == k.prev && t.next == k.next))
+           if(t.getInfo() != k.getInfo())
            { answer =false;break;}
          k=k.next;}
         return answer;
     }
+    //    public boolean isEqual(IntDoubleList other) {
+//        IntDoubleListElement mytemp = head;
+//        IntDoubleListElement othertemp = other.head;
+//        while (mytemp != null) {
+//            if (!mytemp.isEqual(othertemp))
+//                return false;
+//            mytemp = mytemp.next;
+//            othertemp = othertemp.next;
+//        }
+//        return othertemp == null;
+//    }
 
 }
 
