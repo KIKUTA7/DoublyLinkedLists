@@ -110,6 +110,7 @@ public class IntDoubleList {
                 if(k > 0) x[k-1].next = x[k];
                 k++;}
 
+
         }
         IntDoubleListElement [] v = new IntDoubleListElement[k];
         System.arraycopy(x, 0, v, 0, k);
