@@ -127,7 +127,8 @@ public class IntDoubleList {
             if(t.next==null && k.next!=null) {answer = false;break;}
            if(!t.isEqual(k))
            { answer =false;break;}
-         k=k.next;}
+         if(k!=null) k=k.next;
+        else {answer = false;break;}}
         return answer;
     }
     //    public boolean isEqual(IntDoubleList other) {
