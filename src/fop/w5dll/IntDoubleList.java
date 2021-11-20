@@ -125,7 +125,7 @@ public class IntDoubleList {
         boolean answer = true;
         for (IntDoubleListElement t=head; t!=null ; t=t.next){
             if(t.next==null && k.next!=null) {answer = false;break;}
-           if(t.isEqual(k))
+           if(!t.isEqual(k))
            { answer =false;break;}
          k=k.next;}
         return answer;
