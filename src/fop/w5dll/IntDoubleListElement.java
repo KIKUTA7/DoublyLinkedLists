@@ -34,7 +34,8 @@ public class IntDoubleListElement {
     public IntDoubleListElement getPrev() {
         return prev;
     }
-    public boolean isEqual (IntDoubleListElement other) {
-        return other!=null && this.info == other.info;
+
+    public boolean isEqual(IntDoubleListElement other) {
+        return other != null && info == other.info;
     }
 }

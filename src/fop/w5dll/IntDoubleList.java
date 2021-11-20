@@ -116,24 +116,16 @@ public class IntDoubleList {
         System.arraycopy(x, 0, v, 0, k);
         return v;
     }
-    public boolean isEqual(IntDoubleList other)
-    {
-        if(other == null) return false;
-        IntDoubleListElement k = other.head;
-        IntDoubleListElement t = this.head;
-        if(k==null && t==null) return true;
-        if(t==null) return false;
-        if(k==null) return false;
-        while (t!=null)
-        {
-            if(!k.isEqual(t))
-            {
+    public boolean isEqual(IntDoubleList other) {
+        IntDoubleListElement mytemp = head;
+        IntDoubleListElement othertemp = other.head;
+        while (mytemp != null) {
+            if (!mytemp.isEqual(othertemp))
                 return false;
-            }
-            t=t.next;
-            k=k.next;
+            mytemp = mytemp.next;
+            othertemp = othertemp.next;
         }
-        return true;
+        return othertemp == null;
     }
 
 
