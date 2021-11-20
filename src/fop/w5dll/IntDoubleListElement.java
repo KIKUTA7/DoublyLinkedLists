@@ -35,7 +35,6 @@ public class IntDoubleListElement {
         return prev;
     }
     public boolean isEqual (IntDoubleListElement other) {
-        if(other == null) return false;
-        return this.info == other.info;
+        return other!=null && this.info == other.info;
     }
 }
